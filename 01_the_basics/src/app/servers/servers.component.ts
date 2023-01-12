@@ -18,7 +18,14 @@ export class ServersComponent {
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
 
+  // assignment 2
   username = '';
+  // ---
+
+  // assignment 3
+  clicks: number[] = [];
+  passwordIsVisible = false;
+  // ---
 
   constructor() {
     setTimeout(() => (this.allowNewServer = true), 2000);
@@ -34,4 +41,11 @@ export class ServersComponent {
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
+
+  // assignment 3
+  onTogglePassword() {
+    this.clicks.push(this.clicks.length + 1);
+    this.passwordIsVisible = !this.passwordIsVisible;
+  }
+  // ---
 }

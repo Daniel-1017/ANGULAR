@@ -30,3 +30,16 @@
 >
   Delete
 </button> -->
+
+<!-- assignment 3 -->
+<button class="btn btn-primary" (click)="onTogglePassword()">
+  Display Details
+</button>
+<p *ngIf="passwordIsVisible">Secret Password = tuna</p>
+<p
+  *ngFor="let click of clicks"
+  [ngStyle]="{ backgroundColor: click >= 5 && 'blue' }"
+  [ngClass]="{ white: click >= 5 }"
+>
+  {{ click }}
+</p>
