@@ -37,8 +37,8 @@
 </button>
 <p *ngIf="passwordIsVisible">Secret Password = tuna</p>
 <p
-  *ngFor="let click of clicks"
-  [ngStyle]="{ backgroundColor: click >= 5 && 'blue' }"
+  *ngFor="let click of clicks; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 && 'blue' }"
   [ngClass]="{ white: click >= 5 }"
 >
   {{ click }}

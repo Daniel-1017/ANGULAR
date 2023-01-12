@@ -23,7 +23,7 @@ export class ServersComponent {
   // ---
 
   // assignment 3
-  clicks: number[] = [];
+  clicks: any[] = [];
   passwordIsVisible = false;
   // ---
 
@@ -44,7 +44,8 @@ export class ServersComponent {
 
   // assignment 3
   onTogglePassword() {
-    this.clicks.push(this.clicks.length + 1);
+    // this.clicks.push(this.clicks.length + 1);
+    this.clicks.push(new Date());
     this.passwordIsVisible = !this.passwordIsVisible;
   }
   // ---
