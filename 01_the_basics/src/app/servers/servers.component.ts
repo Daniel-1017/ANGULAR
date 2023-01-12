@@ -15,6 +15,7 @@ export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus = 'No server was created.';
   serverName = '';
+  serverCreated = false;
 
   username = '';
 
@@ -23,6 +24,7 @@ export class ServersComponent {
   }
 
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus =
       'Server was created. Name is ' + this.serverName;
   }

@@ -10,11 +10,14 @@
   Add server
 </button>
 <p>{{ serverCreationStatus }}</p>
+
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+
 <app-server></app-server>
 <app-server></app-server>
 
 <!-- assignment 2 -->
-<input type="text" class="form-control" [(ngModel)]="username" />
+<!-- <input type="text" class="form-control" [(ngModel)]="username" />
 <p>{{ username }}</p>
 <button
   class="btn btn-danger"
@@ -22,4 +25,4 @@
   (click)="username = ''"
 >
   Delete
-</button>
+</button> -->
