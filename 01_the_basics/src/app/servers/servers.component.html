@@ -12,3 +12,14 @@
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<!-- assignment 2 -->
+<input type="text" class="form-control" [(ngModel)]="username" />
+<p>{{ username }}</p>
+<button
+  class="btn btn-danger"
+  [disabled]="!username.length"
+  (click)="username = ''"
+>
+  Delete
+</button>
