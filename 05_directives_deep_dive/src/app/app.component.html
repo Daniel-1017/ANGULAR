@@ -6,11 +6,13 @@
       </button>
       <br /><br />
       <ul class="list-group">
-        <li class="list-group-item"></li>
+        <div *appUnless="onlyOdd">
+          <li class="list-group-item">odd</li>
+        </div>
       </ul>
-      <ng-template [ngIf]="onlyOdd">
+      <!-- <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
-      </ng-template>
+      </ng-template> -->
       <p appBasicHighlight>Style me with basic directive</p>
       <p appBetterHightlight [defaultColor]="'yellow'" [highlightColor]="'red'">
         Style me with better directive
