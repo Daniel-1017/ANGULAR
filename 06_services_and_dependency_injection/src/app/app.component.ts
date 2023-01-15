@@ -8,11 +8,11 @@ import { AccountsService } from './accounts.service';
   providers: [AccountsService],
 })
 export class AppComponent implements OnInit {
-  account: { name: string; status: string }[] = [];
+  accounts: { name: string; status: string }[] = [];
 
   constructor(private accountsService: AccountsService) {}
 
   ngOnInit(): void {
-    this.account = this.accountsService.accounts;
+    this.accounts = this.accountsService.accounts;
   }
 }
