@@ -14,6 +14,9 @@ import { PageNotFountComponent } from './page-not-fount/page-not-fount.component
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     PageNotFountComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
-  providers: [ServersService],
+  providers: [ServersService, AuthGuard, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
