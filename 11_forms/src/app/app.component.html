@@ -27,7 +27,14 @@
               name="email"
               required
               email
+              #email="ngModel"
             />
+            <span
+              class="help-block"
+              style="color: #f00"
+              *ngIf="!email.valid && email.touched"
+              >Please enter a valid value.</span
+            >
           </div>
         </div>
         <div class="form-group">
