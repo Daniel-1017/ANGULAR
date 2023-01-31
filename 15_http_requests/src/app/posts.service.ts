@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Post } from './post.model';
 import { map } from 'rxjs/internal/operators/map';
 import { catchError } from 'rxjs/internal/operators/catchError';
@@ -35,7 +35,12 @@ export class PostsService {
   fetchPosts() {
     return this.http
       .get<{ [key: string]: Post }>(
-        'https://ng-complete-guide-a1e66-default-rtdb.firebaseio.com/posts.json'
+        'https://ng-complete-guide-a1e66-default-rtdb.firebaseio.com/posts.json',
+        {
+          headers: new HttpHeaders({
+            FAKE_TOKEN: 'FXAI_1B6X',
+          }),
+        }
       )
       .pipe(
         map((res) => {
