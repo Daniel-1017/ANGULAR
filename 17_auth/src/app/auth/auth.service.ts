@@ -18,8 +18,8 @@ export class AuthService {
     return this.http.post(
       'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDbVtODAMhsO-yi0ou-oJnow5_8ayyoqjI',
       {
-        email,
-        password,
+        email: email,
+        password: password,
         returnSecureToken: true,
       }
     );
